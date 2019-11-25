@@ -1,6 +1,6 @@
 {
   "name": "copy-logo-to-clipboard",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "copy tuchuang.space logo to system clipboard",
   "main": "index.js",
   "scripts": {
