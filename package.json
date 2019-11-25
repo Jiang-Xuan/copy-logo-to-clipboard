@@ -2,16 +2,19 @@
   "name": "copy-logo-to-clipboard",
   "version": "1.0.0",
   "description": "copy tuchuang.space logo to system clipboard",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder ."
+    "build": "electron-builder main.js",
+    "install": "node install.js"
   },
   "repository": "https://github.com/Jiang-Xuan/copy-logo-to-clipboard",
   "keywords": [],
   "author": "Jiang-Xuan",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "download": "^7.1.0"
+  },
   "devDependencies": {
     "electron": "7.1.1",
     "electron-builder": "^22.1.0",
