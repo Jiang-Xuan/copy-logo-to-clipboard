@@ -9,11 +9,11 @@ module.exports = {
   copyLogoToClip: () => {
     if (platform() === 'win32') {
       return promisifyExec(
-        'cd ./build/copy-logo-to-clipboard-win32-64 && ./copy-logo-to-clipboard-win32-64.exe'
+        'cd ./.exec/copy-logo-to-clipboard-win32-64 && ./copy-logo-to-clipboard-win32-64.exe'
       )
     } else if (platform() === 'darwin') {
       return promisifyExec(
-        'cd ./build/copy-logo-to-clipboard-darwin-x64/copy-logo-to-clipboard.app/Contents/MacOS && ./copy-logo-to-clipboard'
+        'cd ./.exec/mac/copy-logo-to-clipboard.app/Contents/MacOS && ./copy-logo-to-clipboard'
       )
     } else {
       throw new Error('only support win32, darwin')

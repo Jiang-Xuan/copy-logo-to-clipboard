@@ -19,10 +19,17 @@ if (os.platform() === 'darwin') {
 const download = require('download')
 
 const downloadExecFile = async () => {
-  const dulpex = download(downloadUrl, EXEC_FILE_STORE_PATH)
+  await new Promise((resolve, reject) => {
+    const dulpex = download(downloadUrl, EXEC_FILE_STORE_PATH, {
+      extract: true
+    })
 
-  dulpex.on('downloadProgress', ({ percent }) => {
-    console.log(`下载进度: ${percent * 100}%`)
+    dulpex.on('downloadProgress', ({ percent }) => {
+      console.log(`下载进度: ${percent * 100}%`)
+      if (percent === 100) {
+        resolve()
+      }
+    })
   })
 }
 
