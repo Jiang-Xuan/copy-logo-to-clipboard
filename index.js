@@ -6,10 +6,10 @@ const promisifyExec = promisify(exec)
 
 module.exports = {
   logoMd5Hash: '3c7185dd08b19791c4141f089616952f',
-  copyLogoToClip: () => {
+  copyLogoToClip: async () => {
     if (platform() === 'win32') {
       return promisifyExec(
-        'cd ./.exec/copy-logo-to-clipboard-win32-64 && ./copy-logo-to-clipboard-win32-64.exe'
+        'cd .\\.exec\\win-unpacked && .\\copy-logo-to-clipboard.exe'
       )
     } else if (platform() === 'darwin') {
       return promisifyExec(
