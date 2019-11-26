@@ -2,7 +2,7 @@
 const { app, clipboard, nativeImage } = require('electron')
 const path = require('path')
 
-console.log('foo')
+console.log('main.js')
 
 const fooImage = nativeImage.createFromPath(path.resolve(__dirname, './logo.png'))
 
