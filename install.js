@@ -28,8 +28,14 @@ const downloadExecFile = async () => {
       extract: true
     })
 
+    let percentInt = 0
     dulpex.on('downloadProgress', ({ percent }) => {
-      console.log(`下载进度: ${percent * 100}%`)
+      if (
+        parseInt(percent * 100, 10) !== percentInt
+      ) {
+        percentInt = parseInt(percent * 100, 10)
+        console.log(`下载进度: ${percentInt}%`)
+      }
       if (percent === 100) {
         resolve()
       }
