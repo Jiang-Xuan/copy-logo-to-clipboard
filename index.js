@@ -2,13 +2,18 @@ const { platform } = require('os')
 const path = require('path')
 const { exec } = require('child_process')
 const { promisify } = require('util')
+const jimp = require('jimp')
 
 const promisifyExec = promisify(exec)
 
 const execPath = path.resolve(__dirname, './.exec')
 
 module.exports = {
-  logoMd5Hash: '3c7185dd08b19791c4141f089616952f',
+  getLogoBitmap: async () => {
+    const logoJimp = await jimp.read(path.resolve(__dirname, './logo.png'))
+
+    return logoJimp.bitmap.data
+  },
   copyLogoToClip: async () => {
     if (platform() === 'win32') {
       return promisifyExec(
