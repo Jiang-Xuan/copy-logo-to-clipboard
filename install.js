@@ -9,10 +9,12 @@ const DOWNLOAD_HOST = 'https://assets.tuchuang.space'
 let downloadUrl
 let platformSupport = true
 
+const VERSION = '0.2.0'
+
 if (os.platform() === 'darwin') {
-  downloadUrl = `${DOWNLOAD_HOST}/copy-logo-to-clipboard-0.1.0-mac.zip`
+  downloadUrl = `${DOWNLOAD_HOST}/copy-logo-to-clipboard-${VERSION}-mac.zip`
 } else if (os.platform() === 'win32') {
-  downloadUrl = `${DOWNLOAD_HOST}/copy-logo-to-clipboard-0.1.0-win32.zip`
+  downloadUrl = `${DOWNLOAD_HOST}/copy-logo-to-clipboard-${VERSION}-win32.zip`
 } else {
   console.error(`不支持的平台, ${os.platform()}`)
   platformSupport = false
