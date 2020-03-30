@@ -16,7 +16,7 @@
   "dependencies": {
     "@jest-runner/electron": "^2.0.3",
     "download": "^7.1.0",
-    "extract-zip": "^1.6.7",
+    "extract-zip": "^2.0.0",
     "jimp": "^0.9.3"
   },
   "devDependencies": {
