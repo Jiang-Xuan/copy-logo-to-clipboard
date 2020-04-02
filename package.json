@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@jest-runner/electron": "^2.0.3",
-    "download": "^7.1.0",
+    "download": "^8.0.0",
     "extract-zip": "^1.6.7",
     "jimp": "^0.9.3"
   },
