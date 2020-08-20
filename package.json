@@ -20,7 +20,7 @@
     "jimp": "^0.9.3"
   },
   "devDependencies": {
-    "electron": "7.1.1",
+    "electron": "9.2.1",
     "electron-builder": "^22.1.0",
     "jest": "^24.9.0",
     "md5": "^2.2.1",
