@@ -14,7 +14,7 @@
   "author": "Jiang-Xuan",
   "license": "MIT",
   "dependencies": {
-    "@jest-runner/electron": "^2.0.3",
+    "@jest-runner/electron": "^3.0.1",
     "download": "^7.1.0",
     "extract-zip": "^1.6.7",
     "jimp": "^0.9.3"
